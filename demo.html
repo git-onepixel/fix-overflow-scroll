@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>demo</title>
+    <script src="./index.js"></script>
+    <style>
+        html, body, ul, li{
+            margin: 0;
+            padding: 0 0.5rem 0.5rem;
+            list-style: none;
+        }
+        html {
+           font-size:15px;
+           background: #cccccc; 
+        }
+        h2 {
+            text-align: center;
+        }
+        .scroll-wrap {
+            width: 100%;
+            height: 75vh;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            background: #fff; 
+        }
+        .download-list .item {
+            border-bottom: 1px solid #cccccc;
+            line-height: 2rem;
+        }
+
+        .download-list .item span {
+            display: inline-block;
+        }
+
+        .download-list .item span:nth-child(1) {
+            width: 40%;
+        }
+
+        .download-list .item span:nth-child(2) {
+            width: 60%;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>IOS内部滚动测试</h2>
+    <div class="scroll-wrap">
+        <ul class="download-list">
+            <li class="item"><span>Date</span><span>Downloads</span></li>
+            <li class="item"><span>2019-05-10</span><span>1825110848</span></li>
+            <li class="item"><span>2019-05-11</span><span>907489790</span></li>
+            <li class="item"><span>2019-05-12</span><span>515271570</span></li>
+            <li class="item"><span>2019-05-13</span><span>1976231593</span></li>
+            <li class="item"><span>2019-05-14</span><span>2173515956</span></li>
+            <li class="item"><span>2019-05-15</span><span>2110094061</span></li>
+            <li class="item"><span>2019-05-16</span><span>2138385063</span></li>
+            <li class="item"><span>2019-05-17</span><span>1882865811</span></li>
+            <li class="item"><span>2019-05-18</span><span>524570391</span></li>
+            <li class="item"><span>2019-05-19</span><span>519884647</span></li>
+            <li class="item"><span>2019-05-20</span><span>1939580340</span></li>
+            <li class="item"><span>2019-05-21</span><span>2147830730</span></li>
+            <li class="item"><span>2019-05-22</span><span>2140565079</span></li>
+            <li class="item"><span>2019-05-23</span><span>2110721312</span></li>
+            <li class="item"><span>2019-05-24</span><span>1842850464</span></li>
+            <li class="item"><span>2019-05-25</span><span>511619724</span></li>
+            <li class="item"><span>2019-05-26</span><span>504460095</span></li>
+            <li class="item"><span>2019-05-27</span><span>1553196100</span></li>
+            <li class="item"><span>2019-05-28</span><span>2013866758</span></li>
+            <li class="item"><span>2019-05-29</span><span>2125527090</span></li>
+            <li class="item"><span>2019-05-30</span><span>1857211231</span></li>
+            <li class="item"><span>2019-05-31</span><span>1812166662</span></li>
+            <li class="item"><span>2019-06-01</span><span>519819710</span></li>
+            <li class="item"><span>2019-06-02</span><span>562571350</span></li>
+            <li class="item"><span>2019-06-03</span><span>2085429453</span></li>
+            <li class="item"><span>2019-06-04</span><span>2159969959</span></li>
+            <li class="item"><span>2019-06-05</span><span>2132238143</span></li>
+        </ul>
+    </div>
+    
+    <script>
+        fixOverflowScroll('.scroll-wrap');
+    </script>
+</body>
+
+</html>
