@@ -38,8 +38,8 @@ var fixOverflowScroll = function (selector) {
         var target = document.querySelector(selector);
         if (target) {
             target.addEventListener('touchstart', function (e) {
-                verticalScroll(e);
-                horizontalScroll(e);
+                verticalScroll.call(this, e);
+                horizontalScroll.call(this, e);
             }, false);
         } else {
             throw new Error('Do not found an element with selector `' + selector + '`. ');
