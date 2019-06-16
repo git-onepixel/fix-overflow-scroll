@@ -18,10 +18,23 @@
            background: #d7d7d7; 
            padding: 0 1rem 0.5rem;
            box-sizing: border-box;
-           font-family: Arial,Helvetica,sans-serif;
         }
         h2 {
             text-align: center;
+        }
+        .tab {
+            font-size: 0;
+            padding: 5vh 0;
+        }
+        .tab .btn {
+            display: inline-block;
+            width: 50%;
+            line-height: 8vh;
+            text-align: center;
+            font-size: 1rem;
+            background: #fff;
+            box-sizing: border-box;
+            color: #333;
         }
         .scroll-wrap {
             width: 100%;
@@ -49,10 +62,36 @@
             width: 60%;
         }
     </style>
+    <script>
+        if (location.search.indexOf('case=1') < 0) {
+            fixOverflowScroll('.scroll-wrap');
+        }
+        document.addEventListener('DOMContentLoaded', function(e) {
+            var a = document.getElementById('a');
+            var b = document.getElementById('b');
+            if (location.search.indexOf('case=1') < 0) {
+                a.style.opacity = '';
+                b.style.opacity = '0.5';
+            } else {
+                a.style.opacity = '0.5';
+                b.style.opacity = '';    
+            }    
+        })
+        function onTabClick(s) {
+            if (s == 1) {
+                location.replace('index.html?case=1');
+            } else {
+                location.replace('index.html');
+            }
+        }
+    </script>
 </head>
 
 <body>
-    <h2>IOS内部滚动测试</h2>
+    <div class="tab">
+        <div id="a" onclick="onTabClick()" class="btn">正常</div>
+        <div id="b" onclick="onTabClick(1)" class="btn">异常</div>
+    </div>
     <div class="scroll-wrap">
         <ul class="download-list">
             <li class="item"><span>Date</span><span>Downloads</span></li>
@@ -86,9 +125,7 @@
         </ul>
     </div>
     
-    <script>
-        fixOverflowScroll('.scroll-wrap');
-    </script>
+    
 </body>
 
 </html>
