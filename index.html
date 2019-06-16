@@ -17,6 +17,7 @@
         html {
            background: #d7d7d7; 
            padding: 0 1rem 0.5rem;
+           height: 100vh;
            box-sizing: border-box;
         }
         h2 {
@@ -24,12 +25,12 @@
         }
         .tab {
             font-size: 0;
-            padding: 5vh 0;
+            padding: 1rem 0;
         }
         .tab .btn {
             display: inline-block;
             width: 50%;
-            line-height: 8vh;
+            line-height: 2.4rem;
             text-align: center;
             font-size: 1rem;
             background: #fff;
@@ -48,6 +49,9 @@
         .download-list .item {
             border-bottom: 1px solid #d7d7d7;
             line-height: 2.5rem;
+        }
+        .download-list .item:last-child {
+            border-bottom:none;
         }
 
         .download-list .item span {
@@ -70,11 +74,11 @@
             var a = document.getElementById('a');
             var b = document.getElementById('b');
             if (location.search.indexOf('case=1') < 0) {
-                a.style.opacity = '';
-                b.style.opacity = '0.5';
+                a.style.cssText = 'font-weight:700';
+                b.style.cssText = 'opacity:0.5;';
             } else {
-                a.style.opacity = '0.5';
-                b.style.opacity = '';    
+                a.style.cssText = 'opacity:0.5;';
+                b.style.cssText = 'font-weight:700';    
             }    
         })
         function onTabClick(s) {
