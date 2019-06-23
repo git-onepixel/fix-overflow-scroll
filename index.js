@@ -1,7 +1,7 @@
 
 var isIosPlatform = false;
 
-if (window && window.navigator) {
+if (typeof window === 'object' && window.navigator) {
     var ua = navigator.userAgent || '';
     isIosPlatform = !!ua.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
 }
