@@ -47,14 +47,16 @@ var fixOverflowScroll = function (selector) {
     }, false);
 };
 
-(function (factory) {
-    if (typeof module !== 'undefined' && typeof exports === 'object' && define.cmd) {
-        module.exports = factory;
-    } else if (typeof define === 'function' && define.amd) {
-        define('fixOverflowScroll', function () {
-            return factory;
-        });
+(function (root, factory) {
+    if(typeof exports === 'object' && typeof module === 'object') {
+        module.exports = factory();
+    } else if(typeof define === 'function' && define.amd) {
+        define([], factory);
+    } else if(typeof exports === 'object') {
+        exports['fixOverflowScroll'] = factory();
     } else {
-        window.fixOverflowScroll = factory;
+        root['fixOverflowScroll'] = factory();
     }
-})(fixOverflowScroll);
+})(this, function () {
+    return fixOverflowScroll;
+});
