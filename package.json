@@ -1,6 +1,6 @@
 {
   "name": "fix-overflow-scroll",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Fix overflow scroll bounce on ios",
   "main": "index.js",
   "scripts": {
